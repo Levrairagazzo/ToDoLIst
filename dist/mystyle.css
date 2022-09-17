@@ -1,0 +1,32 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+}
+h2{
+    margin: 0px;
+}
+
+#sideAndMain{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    height: 100vh;
+}
+#header{
+    background-color: #f97316;
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+}
+#side{
+    background-color: #fcd34d;
+   
+}
+#main {
+    background-color: #f87171;
+    display: flex;
+    flex-wrap: wrap;
+}
