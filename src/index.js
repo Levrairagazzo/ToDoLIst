@@ -1,25 +1,34 @@
-import {createProject, test, createItem} from "./logic";
+import {createProject, test, createItem, addInputAndButton, testFunction, renderProject} from "./logic";
 
-let index = 1;
+ let mainArea = document.getElementById('main');
 
-test();
+ let newPro = createProject('my project');
+
+ renderProject(newPro,mainArea);
+
+ console.log('hello');
 
 
+// let index = 1;
+
+// test();
 
 
-
-document.getElementById("myBtn").onclick = function () {
+// document.getElementById("myBtn").onclick = function () {
     
-    //Getting the Title of the Project
-    let titleInput = document.getElementById("projectTitle").value;
-    if(titleInput ==='') return;
-   
-    let newProject = createProject(titleInput, index);
-    index++;
-    const main = document.getElementById('projectList');
-    main.appendChild(newProject.projectDiv);
-    main.appendChild(createItem("This is a description!"));
+//     //Getting the Title of the Project
+//     let titleInput = document.getElementById("projectTitle").value;
+//     if(titleInput ==='') return;
 
+//    //creating a new Project
+//     let newProject = createProject(titleInput, index);
+//     index++;
+//     const mainArea = document.getElementById('main');
+//     mainArea.appendChild(newProject.projectDiv);
+
+//     //adding input and button to newProject
+//     newProject.projectDiv.appendChild(addInputAndButton());
     
-    };
+//     };
+
 
