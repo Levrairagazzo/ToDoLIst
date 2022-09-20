@@ -1,9 +1,10 @@
-import createTask from "./taskObject";
+
 //Global Variable
 let main = document.getElementById('main');
 let projectList = document.getElementById("projectList");
 let addProjectButton = document.getElementById("addProjectBtn");
 let projectIndex = 0;
+let toDos = document.getElementById("toDos");
 
 
 //Project Object
@@ -16,9 +17,7 @@ const createProject = (name) => {
     let getName = () => {
         return projectName;
     }
-    let getDescription = () => {
-      return projectDescription;
-    } 
+   
     let addToList = (newItem) => {
       toDoList.push(newItem);
     }
@@ -26,7 +25,7 @@ const createProject = (name) => {
       return toDoList;
     }
     return {
-      getName, getDescription, addToList, getList
+      getName, addToList, getList, removeFromList
     };
   }
 
@@ -39,6 +38,7 @@ const renderProject = (project, root) => {
     projectContainer.dataset.index = projectIndex;
   //Proect Titel
     let projectTitle = document.createElement('h3');
+    projectTitle.setAttribute('class','title');
     projectTitle.innerText = project.getName();
     projectContainer.appendChild(projectTitle);
   
@@ -46,23 +46,30 @@ const renderProject = (project, root) => {
     let deleteButt = generateButton('Delete');
     projectContainer.appendChild(deleteButt);
     deleteButt.onclick = () => {
+
+
         deleteProject(projectContainer);
 
     };
-  
 
-    projectContainer.onclick = function () {
+  
+  
+    
+      
+   
+    projectTitle.onclick = function () {
       // document.getElementById("toDos").style.display = "block";
       renderList(project, main);
+
       
     };
-
+  
 
     root.appendChild(projectContainer);
    };
 
    const increaseIndex = () => {
-      return projectIndex ++;
+      return ++projectIndex;
 
    }
 
@@ -75,7 +82,8 @@ const renderProject = (project, root) => {
     toDos.appendChild(listContainer);
 
     let toDoList = project.getList();
-    const renderEverything = () => {toDoList.forEach(element => {
+    const renderEverything = () => {
+      toDoList.forEach(element => {
       
           listContainer.appendChild(element);
     
@@ -97,8 +105,9 @@ const renderProject = (project, root) => {
    }
 
    const deleteProject = (projectContainer) => {
+    clearListDiplay(toDos)
     projectContainer.remove();
-    }
+   }
 
    
 
@@ -118,8 +127,22 @@ const renderProject = (project, root) => {
 
    const listElement = (content) => {
     let element = document.createElement('li');
-    element.innerHTML = content;
+    element.innerText = content;
+    let deleteToDo = document.createElement('button');
+    deleteToDo.innerText = "Delete task";
+    deleteToDo.addEventListener('click', () => {
+      // removeElement()
+      element.remove();
+
+    }, false);
+
+    element.appendChild(deleteToDo);
     return element;
+   }
+
+   const removeElement = (project, element) => {
+    element.remove();
+    project.removeFromList(element);
    }
 
    
