@@ -1,12 +1,24 @@
-import {createProject, test, createItem, addInputAndButton, testFunction, renderProject} from "./logic";
+import {createProject, renderProject, renderList, increaseIndex, deleteProject} from "./logic";
+
+//Global Variable
 
  let mainArea = document.getElementById('main');
+ let projectList = document.getElementById("projectList");
+ let addProjectButton = document.getElementById("addProjectBtn");
 
- let newPro = createProject('my project');
+//Adding new project
+ addProjectButton.onclick = function(){
+    let titleInput = document.getElementById("projectTitle").value;
+    let newPro = createProject(titleInput);
+        renderProject(newPro, projectList);
+    };
 
- renderProject(newPro,mainArea);
 
- console.log('hello');
+
+
+
+
+
 
 
 // let index = 1;

@@ -27,6 +27,23 @@ h2{
 }
 #main {
     background-color: #f87171;
-    display: flex;
-    flex-wrap: wrap;
+    display: block;
+    /* display: flex;
+    flex-wrap: wrap; */
+}
+#projectList div {
+    background-color: aqua;
+
+}
+#projectList div {
+    background-color: aqua;
+
+}
+#projectList div :hover {
+    cursor: pointer;
+    background-color: yellow;
+
+}
+#toDoForm {
+    /* display: none; */
 }

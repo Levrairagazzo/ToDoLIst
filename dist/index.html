@@ -20,23 +20,31 @@
                       <input type="text" name="title" id="projectTitle" value="test" required>
                     </div>
                     <div class="form-example">
-                      <label for="email">Description </label>
-                      <input type="text" name="email" id="email" >
-                    </div>
-                    <div class="form-example">
-                      <button id="myBtn" type="reset"> Add Project </button>
+                      <button id="addProjectBtn" type="reset"> Add Project </button>
                     </div>
                   </form>
-
-                  <h3>List of Project</h3>
-                  <ul id="projectList">
+                  <h2>List of Project</h2>
+                  <div id="projectList">
 
                   
 
-                  </ul>
+                  </div>
                
             </div>
-            <div id="main"></div>
+            <div id="main">
+                <h2> To-do List</h2>
+                <div id="toDos">
+
+                </div>
+                <form action="" method="get" class="form-example" id="toDoForm">
+                    <div class="form-example">
+                      <label for="name">Add new item: </label>
+                      <input type="text" name="newItem" id="addNewItem" value="item1" required>
+                    </div>
+                    <div class="form-example">
+                      <button id="listBtn" type="reset"> Add Item </button>
+                    </div>
+            </div>
         </div>
        
     </div>
