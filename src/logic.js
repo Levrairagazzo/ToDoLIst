@@ -53,6 +53,7 @@ const renderProject = (project, root) => {
   
   //Delete project
     let deleteButt = generateButton('Delete');
+    deleteButt.setAttribute('class', 'deleteProjectBtn');
     projectContainer.appendChild(deleteButt);
     deleteButt.onclick = () => {
 
