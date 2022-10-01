@@ -1,0 +1,88 @@
+*{
+    box-sizing: border-box;
+}
+body{
+    margin: 0px;
+    padding: 0px;
+    border: 0px;
+    background-color: #fecaca;
+}
+h2{
+    margin: 0px;
+}
+
+#sideAndMain{
+    display: grid;
+    grid-template-columns: 1fr 3fr;
+    height: 100vh;
+}
+#header{
+    height: 15vh;
+    display: flex;
+    justify-content: center;
+    background-color: #fee2e2;
+    border: #fecaca solid 5px;
+    border-radius: 5px;
+}
+#side{
+    background-color: #fef2f2;
+   
+}
+#main {
+    display: block;
+    background-color: #fee2e2;
+    border: #fecaca solid 5px;
+    border-radius: 5px;
+
+}
+#projectList div {
+    background-color: aqua;
+
+}
+#projectList div {
+    background-color: #fee2e2;
+    margin: 5px;
+    display: flex;
+    justify-content: space-around;
+    border-radius: 10px;
+
+}
+#projectList div :hover {
+    cursor: pointer;
+    /* background-color: yellow; */
+
+}
+
+li{
+    display: flex;
+}
+
+button{
+    margin: 10px 0px;
+  font-size: 12px;
+  text-align: center;
+  cursor: pointer;
+  outline: none;
+  color: #881337;
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 4px #999;
+    background-color: #fee2e2;
+    border: 0px;
+
+}
+
+button:hover {
+   
+    background-color:#fca5a5;
+    
+}
+
+button:active{
+    background-color: #fca5a5;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+/* #toDoForm {
+    /* display: none; */
+/* } */

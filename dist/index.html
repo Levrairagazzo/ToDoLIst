@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="mystyle.css">
+    <title>Syd's To-Do-List</title>
+</head>
+<body>
+    <div id="content">
+        <div id="header">
+            <h2>La To-Do list de Sydney</h2>
+        </div>
+        <div id="sideAndMain">
+            <div id="side">
+                <form action="" method="get" class="form-example" id="myForm">
+                    <div class="form-example">
+                      <label for="name">Project Title </label>
+                      <input type="text" name="title" id="projectTitle" value="test" required>
+                    </div>
+                    <div class="form-example">
+                      <button id="addProjectBtn" type="reset"> Add Project </button>
+                    </div>
+                  </form>
+                  <h2>List of Project</h2>
+                  <div id="projectList">
+
+                  
+
+                  </div>
+               
+            </div>
+            <div id="main">
+                <h2> To-do List</h2>
+                <div id="toDos">
+
+                </div>
+                <form action="" method="get" class="form-example" id="toDoForm">
+                    <div class="form-example">
+                      <label for="name">Add new item: </label>
+                      <input type="text" name="newItem" id="addNewItem" value="item1" required>
+                    </div>
+                    <div class="form-example">
+                      <button id="listBtn" type="reset"> Add Item </button>
+                    </div>
+            </div>
+        </div>
+       
+    </div>
+    
+</body>
+<script src="main.js"></script>
+</html>
